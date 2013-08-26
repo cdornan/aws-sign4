@@ -1,5 +1,5 @@
 Name:                aws-sign4
-Version:             0.0.0.1
+Version:             1.0.0.0
 Synopsis:            Amazon Web Services (AWS) Signature v4 HTTP request signer
 Description:         Functions to sign AWS requests with the AWS Signature-V4 protocol (required for the Elastic Transcoder service)
 Homepage:            http://github.com/iconnect/aws-sign4
@@ -17,7 +17,7 @@ Cabal-version:       >=1.10
 Source-repository this
     type:           git
     location:       https://github.com/iconnect/aws-sign4.git
-    tag:            0.0.0.1
+    tag:            1.0.0.0
 
 Source-repository head
     type:           git

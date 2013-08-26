@@ -35,21 +35,21 @@ import           Safe
 
 data Sign4
     = Sign4
-        { s4Credentials :: Credentials          -- | AWS credentials used to sign the request
-        , s4Date        :: UTCTime              -- | date/time stamp for request
-        , s4Endpoint    :: B.ByteString         -- | service id: "ets" for Elastic Transcode
-        , s4Service     :: B.ByteString         -- | service id: ets => Elastic Transcode
-        , s4Method      :: H.Method             -- | HTTP request method
-        , s4Path        :: B.ByteString         -- | URI path component (excluding host & query)
-        , s4Headers     :: H.RequestHeaders     -- | The request headers
-        , s4Query       :: H.Query              -- | Parsed query string information
-        , s4Body        :: B.ByteString         -- | Body of request
+        { s4Credentials :: Credentials          -- ^ AWS credentials used to sign the request
+        , s4Date        :: UTCTime              -- ^ date/time stamp for request
+        , s4Endpoint    :: B.ByteString         -- ^ service id: "ets" for Elastic Transcode
+        , s4Service     :: B.ByteString         -- ^ service id: ets => Elastic Transcode
+        , s4Method      :: H.Method             -- ^ HTTP request method
+        , s4Path        :: B.ByteString         -- ^ URI path component (excluding host & query)
+        , s4Headers     :: H.RequestHeaders     -- ^ The request headers
+        , s4Query       :: H.Query              -- ^ Parsed query string information
+        , s4Body        :: B.ByteString         -- ^ Body of request
 
         -- These fields are for internal use: set them up with Nothing
         -- (will be filled in by complete_sign4, below)
                                 
-        , s4SgndHeaders :: Maybe B.ByteString   -- | Signed headers    (internally calculated)
-        , s4CnclHeaders :: Maybe B.ByteString   -- | Canonical headers (internally calculated)
+        , s4SgndHeaders :: Maybe B.ByteString   -- ^ Signed headers    (internally calculated)
+        , s4CnclHeaders :: Maybe B.ByteString   -- ^ Canonical headers (internally calculated)
         }
     deriving (Typeable)
 
